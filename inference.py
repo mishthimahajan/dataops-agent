@@ -14,6 +14,7 @@ def run():
     ]
 
     total_reward = 0
+    # checker refresh
 
     for action in actions:
         step = requests.post(f"{API_BASE_URL}/step", json=action).json()
