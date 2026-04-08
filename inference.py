@@ -10,13 +10,13 @@ def run():
     if not HF_TOKEN:
         raise ValueError("HF_TOKEN is required")
 
-    base_url = os.getenv(
+    env_base_url = os.getenv(
         "ENV_BASE_URL",
         "https://mishthimahajan-dataops-agent.hf.space"
     )
 
     reset_resp = requests.post(
-        f"{base_url}/reset",
+        f"{env_base_url}/reset",
         json={"task": "easy"},
         timeout=30
     )
@@ -32,7 +32,7 @@ def run():
 
     for action in actions:
         step_resp = requests.post(
-            f"{base_url}/step",
+            f"{env_base_url}/step",
             json=action,
             timeout=30
         )
