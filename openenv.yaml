@@ -1,0 +1,13 @@
+name: dataops-agent
+version: 2.0
+description: Advanced DataOps AI Environment
+
+tasks:
+  - easy
+  - medium
+  - hard
+
+actions:
+  - clean_missing
+  - convert_age
+  - compute_avg_salary
